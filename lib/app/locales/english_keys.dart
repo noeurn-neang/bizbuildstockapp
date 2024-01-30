@@ -1,0 +1,3 @@
+getEnglishKeys() {
+  return {"Settings": "Settings"};
+}
