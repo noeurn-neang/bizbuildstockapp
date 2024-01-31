@@ -30,8 +30,8 @@ class MainController extends GetxController {
       'route': Routes.STOCK_COUNT,
     },
     {
-      "title": 'Daily sale',
-      'icon': Icons.point_of_sale,
+      "title": 'Daily sale report',
+      'icon': Icons.attach_money,
       'route': Routes.DAILY_SALRE_REPORT,
     }
   ];

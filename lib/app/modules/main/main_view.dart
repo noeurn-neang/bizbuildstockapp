@@ -32,7 +32,7 @@ class HomeView extends StatelessWidget {
           flexibleSpace: FlexibleSpaceBar(
             titlePadding: const EdgeInsets.all(Dimens.marginLarge),
             title: Text(
-              'BizBuildStock-App',
+              'BizBuildStock App',
               style: TextStyle(
                   fontFamily: 'OpenSans',
                   fontWeight: FontWeight.w500,
@@ -57,7 +57,7 @@ class HomeView extends StatelessWidget {
                 // padding: const EdgeInsets.all(5.0),
                 height: 150.0,
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20.0),
+                  borderRadius: BorderRadius.circular(8),
                   color: Colors.black12,
                 ),
                 child: Column(
@@ -75,7 +75,7 @@ class HomeView extends StatelessWidget {
                             Icon(
                               listMenu?[index]['icon'],
                               size: 60,
-                              color: Theme.of(context).colorScheme.primary,
+                              color: Theme.of(context).primaryColor,
                             ),
                           ],
                         ),
@@ -87,8 +87,8 @@ class HomeView extends StatelessWidget {
                         width: MediaQuery.of(context).size.width,
                         decoration: BoxDecoration(
                           borderRadius: const BorderRadius.only(
-                            bottomLeft: Radius.circular(20),
-                            bottomRight: Radius.circular(20),
+                            bottomLeft: Radius.circular(8),
+                            bottomRight: Radius.circular(8),
                           ),
                           color: index % 3 == 0
                               ? Theme.of(context).colorScheme.primary

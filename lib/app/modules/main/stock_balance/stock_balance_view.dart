@@ -189,10 +189,11 @@ class StockBalanceView extends GetView<StockBalanceController> {
                                 padding: const EdgeInsets.symmetric(
                                     vertical: 10.0, horizontal: 15.0),
                                 color: index % 2 == 0
-                                    ? Theme.of(context)
+                                    ? Theme.of(context).colorScheme.background
+                                    : Theme.of(context)
                                         .colorScheme
-                                        .inversePrimary
-                                    : Theme.of(context).colorScheme.background,
+                                        .secondary
+                                        .withOpacity(0.1),
                                 child: Row(
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceEvenly,

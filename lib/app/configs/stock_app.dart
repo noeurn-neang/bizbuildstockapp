@@ -29,13 +29,13 @@ class StockAppConfig {
 
     // Theme Data
     Variables.themeDataDark = ThemeData(
-      colorSchemeSeed: ColorSeed.indigo.color,
+      colorSchemeSeed: primaryColor,
       useMaterial3: true,
       brightness: Brightness.dark,
     );
 
     Variables.themeDataLight = ThemeData(
-      colorSchemeSeed: ColorSeed.indigo.color,
+      colorSchemeSeed: primaryColor,
       useMaterial3: true,
       brightness: Brightness.light,
     );

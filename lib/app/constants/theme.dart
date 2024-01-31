@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_core/utils/color_utils.dart';
 
-const Color primaryColor = Color(0xff029642);
+Color primaryColor = ColorUtils.fromHex('#418B87');
 const Color primaryColorDark = Color(0xff2e82e8);
 const Color accentColor = Color(0xffab9d72);
 // const Color backgroundColor = Color(0xFFF1F3F5);

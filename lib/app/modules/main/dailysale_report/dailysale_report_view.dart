@@ -95,7 +95,7 @@ class DailySaleView extends GetView<DailySaleReportController> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Daily Sale reports'),
+        title: const Text('Daily sale report'),
         actions: [
           IconButton(
               onPressed: controller.openFilterDialog,
