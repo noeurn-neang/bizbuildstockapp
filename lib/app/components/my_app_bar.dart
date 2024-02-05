@@ -1,8 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_core/getx.dart';
-
-import '../constants/theme.dart';
-import '../routes/app_pages.dart';
 
 class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
   final String title;
@@ -12,8 +8,10 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
 
   @override
   Widget build(BuildContext context) {
-    var textStyle =
-        TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Theme.of(context).colorScheme.onSurfaceVariant);
+    var textStyle = TextStyle(
+        fontSize: 20,
+        fontWeight: FontWeight.bold,
+        color: Theme.of(context).colorScheme.onSurfaceVariant);
 
     return SliverAppBar(
       centerTitle: false,
@@ -23,7 +21,6 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
       toolbarHeight: 70,
       elevation: 0,
       surfaceTintColor: Colors.transparent,
-      
     );
   }
 
