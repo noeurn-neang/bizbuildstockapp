@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_core/constants/dimens.dart';
 import 'package:flutter_core/getx.dart';
+import 'package:flutter_core/utils/message_utils.dart';
 
 import '../auth_manager.dart';
 import '../constants/theme.dart';
@@ -98,8 +99,14 @@ class CustomDrawer extends StatelessWidget {
                         selected: Get.currentRoute == menu['route'],
                         onTap: () {
                           if (menu['route'] != null) {
-                            Get.back();
-                            Get.toNamed(menu['route']);
+                            if (menu['route'] == Routes.DAILY_SALRE_REPORT &&
+                                authManager.user.value.fullaccess! != 1) {
+                              showMessage('This menu wasn\'t able to show!',
+                                  isError: true);
+                            } else {
+                              Get.back();
+                              Get.toNamed(menu['route']);
+                            }
                           } else {
                             authManager.logOut();
                           }

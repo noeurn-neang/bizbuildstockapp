@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_core/constants/dimens.dart';
 import 'package:flutter_core/getx.dart';
+import 'package:flutter_core/utils/message_utils.dart';
 
+import '../../auth_manager.dart';
 import '../../components/drawer.dart';
+import '../../routes/app_pages.dart';
 import 'main_controller.dart';
 
 class MainView extends GetView<MainController> {
@@ -24,6 +27,8 @@ class HomeView extends StatelessWidget {
   const HomeView({super.key, this.listMenu});
   @override
   Widget build(BuildContext context) {
+    AuthManager authManager = Get.find();
+
     return CustomScrollView(
       slivers: [
         SliverAppBar(
@@ -51,7 +56,12 @@ class HomeView extends StatelessWidget {
             ),
             itemBuilder: (BuildContext context, int index) => InkWell(
               onTap: () {
-                Get.toNamed(listMenu?[index]['route']);
+                if (listMenu?[index]['route'] == Routes.DAILY_SALRE_REPORT &&
+                    authManager.user.value.fullaccess! != 1) {
+                  showMessage('This menu wasn\'t able to show!', isError: true);
+                } else {
+                  Get.toNamed(listMenu?[index]['route']);
+                }
               },
               child: Container(
                 // padding: const EdgeInsets.all(5.0),

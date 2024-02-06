@@ -7,6 +7,7 @@ class UserModel {
   String? tel;
   String? companyCode;
   String? photoURL;
+  int? fullaccess;
 
   UserModel(
       {this.id,
@@ -16,6 +17,7 @@ class UserModel {
       this.fullName,
       this.tel,
       this.companyCode,
+      this.fullaccess,
       this.photoURL});
 
   UserModel.fromJson(Map<String, dynamic> json) {
@@ -27,6 +29,7 @@ class UserModel {
     tel = json['tel'];
     companyCode = json['companyCode'];
     photoURL = json['photoURL'];
+    fullaccess = int.parse(json['fullaccess']);
   }
 
   Map<String, dynamic> toJson() {
@@ -39,6 +42,7 @@ class UserModel {
     data['tel'] = tel;
     data['companyCode'] = companyCode;
     data['photoURL'] = photoURL;
+    data['fullaccess'] = fullaccess;
     return data;
   }
 }
